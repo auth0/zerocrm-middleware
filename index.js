@@ -1,5 +1,3 @@
-module.exports = createZeroCRMMiddleware;
-
 const jsonParser=require('body-parser').json();
 
 function createZeroCRMMiddleware() {
@@ -25,3 +23,5 @@ function createZeroCRMMiddleware() {
     });
   }
 }
+
+module.exports = createZeroCRMMiddleware;
