@@ -12,7 +12,7 @@ function createZeroCRMMiddleware() {
       jsonParser(req,res,(parseError) => {
         if (parseError)
           return next(parseError);
-        webtaskFn.module.secrets = ctx.secrets;  
+        webtaskFn.secrets = ctx.secrets;  
         return webtaskFn(req.body, (error, result) => {
           if (error) return next(result);
 
